@@ -1,0 +1,26 @@
+class Solution:
+    def isAnagram(self, s: str, t: str) -> bool:
+        dict = {}
+        if len(s) != len(t):
+            return False
+        
+        #Breaks down t(str), into dictionary letters = keys, letter amount = val
+        for char in t:
+            if char in dict.keys():
+                dict[char] += 1
+            else:
+                dict[char] = 1
+        
+        #Loop through s, if s in dict -1 letter amount
+        for nchar in s:
+            if nchar not in dict.keys():
+                return False
+            else:
+                dict[nchar] -= 1
+        
+        #loop through dict vals, all vals must be 0 to be true else false        
+        for val in dict.values():
+            if val > 0:
+                return False
+            
+        return True
