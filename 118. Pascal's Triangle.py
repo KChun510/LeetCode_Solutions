@@ -26,6 +26,6 @@ class Solution:
 
 """
 Time: O(N^2), There is an operation for each row, and each row has n operations adding sums to a list
-Space: O(N^2), One N comes from the recursive stack, and the second N comes from the res which is going tp hold N elements N*N = n^2
+Space: O(N^2), One N comes from the recursive stack, and the second N comes from the res which is going to hold N elements N*N = n^2
 
 """
