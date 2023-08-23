@@ -16,8 +16,7 @@ class Solution:
                 stack = []
                 while nxt < len(tmp):
                     stack += [tmp[prev] + tmp[nxt]]
-                    prev += 1
-                    nxt += 1
+                    prev, nxt = prev + 1, nxt + 1
                 res += [stack]
                 recur(res, stack, n+1)
         
@@ -26,9 +25,7 @@ class Solution:
 
 
 """
-Time: O(N^2), for each step of n, our tree width is going to get exponetially larger. More operations.
+Time: O(N^2), There is an operation for each row, and each row has n operations adding sums to a list
 Space: O(N^2), One N comes from the recursive stack, and the second N comes from the res which is going tp hold N elements N*N = n^2
 
 """
-
-            
