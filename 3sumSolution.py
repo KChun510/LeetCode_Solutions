@@ -4,7 +4,7 @@ class Solution:
         arr_len = len(nums)
         output = set()
 
-        for i in range(len(nums)):
+        for i in range(arr_len):
             if i > 0 and nums[i] == nums[i - 1]:
                 continue
             j = i + 1
