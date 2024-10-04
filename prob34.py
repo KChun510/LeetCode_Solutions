@@ -6,7 +6,6 @@ class Solution:
 
         while(left <= right):
             mid = left + (right - left) // 2
-            print(mid)
             if nums[mid] == target or (right - left) < 4:
                 while(left < len(nums) and right >= 0):
                     if nums[left] == target and not left_b:
@@ -29,7 +28,7 @@ class Solution:
         return output
 
 
-# Beats top 80% in speed, and top 50% in mem.
+# Beats top 95% in speed 
 
 # Because were already given a loosley sorted arr in decending order we can do a binary search.
 # Eliminating half of the array, until we have a sub section with our 2 wanted vals.
