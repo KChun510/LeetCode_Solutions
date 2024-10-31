@@ -18,8 +18,6 @@ class Solution:
             if curr_path > max_path:
                 max_path = curr_path
             if curr.right:
-                print(curr.right.val)
-            if curr.right:
                 right_nodes.append([curr.right, curr_path + 1])
             if curr.left:
                 curr = curr.left
