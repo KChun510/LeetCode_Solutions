@@ -3,10 +3,8 @@ class Solution:
         possible_set = [n for n in range(1,10)]
         res = []
 
-        def backTrack(currRes, size, target, possible_set):
-            currSum = sum(currRes)
-        
-            if len(currRes) == size and currSum == target:
+        def backTrack(currRes, size, target, possible_set):        
+            if len(currRes) == size and sum(currRes) == target:
                 res.append(currRes)
                 return
             
